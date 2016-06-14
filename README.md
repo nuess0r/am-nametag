@@ -29,6 +29,27 @@ Check it out and see how your name will look!
 Check out the [build instructions](http://analogmachines.com/p/nametag/build/) 
 for an idea of what's involved.
 
+Hardware
+--------
 
 Schematics and PCB designs for through hole and surface mount version can be found
 in our [pcb-workshop project](https://github.com/onitake/pcb-workshop).
+
+Compile instructions
+--------------------
+
+For Linux you need to have avr-gcc, avr-libc and binutils-avr installed. For 
+Windows you need WinAVR.
+
+After cloning this project you can compile it simply by entering:
+`cd "path to your project location"`
+`make`
+
+
+If you also have avrdude installed you can also write the programm to the 
+microcontroller (to "flash" it):
+`make program`
+
+If you have a different programmer than the default you can pass parameters
+to avrdude. This example is for the Atmel Dragon using ISP:
+`make program AVRDUDE_PORT=usb AVRDUDE_PROGRAMMER=dragon_isp`
