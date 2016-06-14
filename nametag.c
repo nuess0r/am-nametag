@@ -39,11 +39,39 @@ void setup() {
 }
 
 const uint8_t states[] = {
-  0b00000001,
-  0b00000010,
-  0b00000100,
-  0b00001000,
-  0b00010000
+  0b00001000, // C
+  0b00010000, // O 
+  0b00000100, // S
+  0b00000001, // I
+  0b00000010, // N
+  0b00000001, // I
+  0b00000100, // S
+  0b00010000, // O 
+  0b00001000, // C
+  0b00000000, // 
+  0b00011111, // COSIN
+  0b00000000, //
+  0b00011111, // COSIN
+  0b00000000, //
+  0b00011000, // CO
+  0b00000111, // SIN
+  0b00000000, //
+  0b00001000, // C
+  0b00011000, // CO 
+  0b00011100, // COS
+  0b00011101, // COSI
+  0b00011111, // COSIN
+  0b00011101, // COSI
+  0b00011100, // COS
+  0b00011000, // CO
+  0b00001000, // C
+  0b00000000, //
+  0b00001010, // C   N
+  0b00011011, // CO IN
+  0b00011111, // COSIN
+  0b00011011, // CO IN
+  0b00001010, // C   N
+  0b00000000, //
 };
 
 void loop() {
@@ -79,9 +107,9 @@ uint8_t blinkState = 0;
 unsigned long lastBlink = 0;
 
 void blink() {
-  if (clock - lastBlink > 25000) {
+  if (clock - lastBlink > 12500) {
     blinkState++;
-    if (blinkState > 4) {
+    if (blinkState > 32) {
       blinkState = 0;
     }
     lastBlink = clock;
