@@ -28,3 +28,7 @@ Check it out and see how your name will look!
 
 Check out the [build instructions](http://analogmachines.com/p/nametag/build/) 
 for an idea of what's involved.
+
+
+Schematics and PCB designs for through hole and surface mount version can be found
+in our [pcb-workshop project](https://github.com/onitake/pcb-workshop).
